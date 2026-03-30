@@ -12,7 +12,7 @@ Focus:
 
 --Data Standardization & Consistency 
 SELECT DISTINCT cntry
-FROM bronze.erp_loc_a101 
+FROM bronze.erp_loc_a101;
 
 
 INSERT INTO silver.erp_loc_a101 
@@ -25,8 +25,8 @@ REPLACE(cid, '-', '') cid, --Handling invalid values
 	WHEN TRIM(cntry) = '' OR cntry IS NULL THEN 'n/a'
 	ELSE TRIM(cntry) --Normalize and handle missing or blank country codes 
 END cntry
-FROM bronze.erp_loc_a101 
+FROM bronze.erp_loc_a101;
 
 --Final check
 SELECT*
-FROM silver.erp_loc_a101
+FROM silver.erp_loc_a101;
