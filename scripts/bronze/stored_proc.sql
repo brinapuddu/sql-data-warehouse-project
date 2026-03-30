@@ -93,11 +93,11 @@ BEGIN
 		PRINT '---------------------------------------------';
 
 		SET @start_time = GETDATE();
-		PRINT '>> Truncating Table: bronze.erp_just_az12';
-		TRUNCATE TABLE bronze.erp_just_az12; 
+		PRINT '>> Truncating Table: bronze.erp_cust_az12';
+		TRUNCATE TABLE bronze.erp_cust_az12; 
 
-		PRINT '>> Inserting Data into Table: bronze.erp_just_az12';
-		BULK INSERT bronze.erp_just_az12
+		PRINT '>> Inserting Data into Table: bronze.erp_cust_az12';
+		BULK INSERT bronze.erp_cust_az12
 		FROM 'C:\Users\UNG\OneDrive - QlikTech Inc\Documents\Certifications\sql-ultimate-course\sql-ultimate-course\docs\sql-data-warehouse-project\sql-data-warehouse-project\datasets\source_erp\CUST_AZ12.csv'
 		WITH ( 
 		 FIRSTROW = 2,
@@ -145,7 +145,7 @@ BEGIN
 	END TRY
 	BEGIN CATCH
 	PRINT '---------------------------------------------';
-	PRINT 'ERROR OCCURED DURING BRONZE LAYER'
+	PRINT 'ERROR OCCURRED DURING BRONZE LAYER'
 	PRINT 'Error Message' + ERROR_MESSAGE();
 	PRINT 'Error Message' + CAST(ERROR_NUMBER() AS VARCHAR);
 	PRINT '---------------------------------------------';
