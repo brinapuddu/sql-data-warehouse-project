@@ -72,7 +72,7 @@ FROM
 	ROW_NUMBER() OVER(PARTITION BY cst_id ORDER BY cst_create_date DESC) as flag_last
 	FROM
 	bronze.crm_cust_info)t
-where flag_last = 1 and cst_id != 29466; --Select the most recent record per customer
+where flag_last = 1; --Select the most recent record per customer
 
 ---Empty Row deletion 
 
