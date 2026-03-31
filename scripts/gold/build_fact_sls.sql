@@ -43,7 +43,7 @@ ON sd.sls_prd_key = pr.product_number
 LEFT JOIN gold.dim_customers cu
 ON sd.sls_cust_id = cu.customer_id;
 
---Foreign Key Integrity( Dimensions)
+--Foreign Key Integrity (Dimensions)
 SELECT*
 FROM gold.fact_sales f
 LEFT JOIN gold.dim_customers c
