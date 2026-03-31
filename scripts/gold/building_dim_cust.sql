@@ -1,3 +1,20 @@
+/*
+-- ============================================================
+-- Data Integration & Gold Layer View Creation
+-- ============================================================
+*/
+
+-- ------------------------------------------------------------
+-- Part 1: Gender Reconciliation Check
+-- ------------------------------------------------------------
+-- Validates gender data across CRM and ERP source systems.
+-- CRM is the authoritative (master) source for gender.
+-- Falls back to ERP value if CRM is 'n/a', defaults to 'n/a'
+-- if both sources are missing.
+-- ------------------------------------------------------------
+
+
+
 --Data Integration 
 SELECT 
 ci.cst_gndr,
