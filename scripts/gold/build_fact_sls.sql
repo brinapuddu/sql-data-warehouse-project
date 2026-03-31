@@ -33,7 +33,7 @@ pr.product_key,
 cu.customer_key,
 sd.sls_order_dt AS order_date,
 sd.sls_ship_dt AS shipping_date, 
-sd.sls_due_dt AS due_dates, 
+sd.sls_due_dt AS due_date, 
 sd.sls_sales AS sales,
 sd.sls_quantity As sales_quantity,
 sd.sls_price AS price
