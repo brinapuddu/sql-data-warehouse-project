@@ -13,8 +13,6 @@
 -- if both sources are missing.
 -- ------------------------------------------------------------
 
-
-
 --Data Integration 
 SELECT 
 ci.cst_gndr,
@@ -39,8 +37,8 @@ ci.cst_marital_status AS marital_status,
 CASE WHEN ci.cst_gndr != 'n/a' THEN  ci.cst_gndr --CRM is the Master for gender info
 	ELSE COALESCE(ca.gen, 'n/a')
 END AS gender,
+ca.bdate as birthdate,
 ci.cst_create_date AS create_date, 
-ca.bdate as birthdate
 FROM silver.crm_cust_info ci
 LEFT JOIN silver.erp_cust_az12 ca
 	ON ci.cst_key = ca.cid
