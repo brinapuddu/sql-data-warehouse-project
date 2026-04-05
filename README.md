@@ -125,7 +125,7 @@ The Gold layer is the **consumption zone**, where data is shaped into a business
 | Property | Detail |
 |----------|--------|
 | **Object Type** | Views |
-| **Load Strategy** | No load — reads directly from Silver layer |
+| **Load Strategy** | No load - reads directly from Silver layer |
 | **Transformations** | Data Integrations · Aggregations · Business Logic |
 | **Data Model** | Star Schema · Flat Tables · Aggregated Tables |
 
