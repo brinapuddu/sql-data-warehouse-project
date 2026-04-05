@@ -90,7 +90,7 @@ The Bronze layer serves as the **landing zone** for all incoming data. Data is i
 |----------|--------|
 | **Object Type** | Tables |
 | **Load Strategy** | Batch Processing · Full Load · Truncate & Insert |
-| **Transformations** | None — data stored as-is |
+| **Transformations** | None - data stored as-is |
 | **Data Model** | None (raw as-is) |
 | **Interface** | Files in Folders (CSV) |
 
