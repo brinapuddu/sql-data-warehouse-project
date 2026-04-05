@@ -140,43 +140,14 @@ The Gold layer is the **consumption zone**, where data is shaped into a business
 
 The ETL pipeline moves data progressively through each Medallion layer using SQL Server Stored Procedures, ensuring modularity, reusability, and maintainability.
 
-### Pipeline Overview
-
-```
-[Source CSV Files]
-       │
-       ▼
-  ┌─────────────────────────────────────────┐
-  │  EXTRACT                                │
-  │  Bulk insert CSV files into Bronze      │
-  │  tables via stored procedures           │
-  └──────────────────┬──────────────────────┘
-                     │
-                     ▼
-  ┌─────────────────────────────────────────┐
-  │  TRANSFORM                              │
-  │  Apply cleansing, standardization,      │
-  │  normalization, and enrichment rules    │
-  │  to populate Silver layer tables        │
-  └──────────────────┬──────────────────────┘
-                     │
-                     ▼
-  ┌─────────────────────────────────────────┐
-  │  LOAD                                   │
-  │  Integrate Silver data into Gold layer  │
-  │  views using business logic and star    │
-  │  schema modeling                        │
-  └─────────────────────────────────────────┘
-```
-
-### Extract — Bronze Layer
+### Extract - Bronze Layer
 
 - **Source**: ERP and CRM systems provided as flat CSV files.
 - **Method**: Bulk insert via SQL Server stored procedures.
-- **Strategy**: Full Load with Truncate & Insert — tables are cleared and fully reloaded on each pipeline run.
+- **Strategy**: Full Load with Truncate & Insert - tables are cleared and fully reloaded on each pipeline run.
 - **Goal**: Capture a complete, unmodified snapshot of source data to ensure full reprocessability.
 
-### Transform — Silver Layer
+### Transform - Silver Layer
 
 Data cleansing and transformation rules are applied via stored procedures before writing to Silver tables:
 
@@ -186,9 +157,9 @@ Data cleansing and transformation rules are applied via stored procedures before
 - Generate derived columns such as calculated customer age, tenure, and product margin bands.
 - Enrich records by joining to reference tables (e.g., region mapping, product classifications).
 
-### Load — Gold Layer
+### Load - Gold Layer
 
-- **Method**: SQL Views — no physical data movement occurs; the Gold layer reads directly from Silver in real time.
+- **Method**: SQL Views - no physical data movement occurs; the Gold layer reads directly from Silver in real time.
 - **Modeling**: Data is organized into a star schema with clearly separated fact and dimension tables to support efficient slicing and aggregation.
 - **Business Logic**: KPI computations, aggregations, and business-specific filtering rules are applied at the view level, keeping them centralized and auditable.
 
