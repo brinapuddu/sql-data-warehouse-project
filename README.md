@@ -1,8 +1,8 @@
 # Data Warehouse and Analytics Project
 
-Welcome to the **Data Warehouse and Analytics Project** repository! 🚀
+Welcome to the **Data Warehouse and Analytics Project** repository! 
 
-This project demonstrates a comprehensive, end-to-end data warehousing and analytics solution — from designing the warehouse infrastructure to delivering actionable business insights through structured reporting. Built as a portfolio project, it reflects industry best practices across data engineering, data modeling, and business intelligence.
+This project demonstrates a comprehensive, end-to-end data warehousing and analytics solution - from designing the warehouse infrastructure to delivering actionable business insights through structured reporting. Built as a portfolio project, it reflects industry best practices across data engineering, data modeling, and business intelligence.
 
 ---
 
@@ -51,7 +51,7 @@ Develop a modern data warehouse using SQL Server to consolidate sales data from 
 
 **Specifications**
 
-- **Data Sources**: Import data from two independent source systems — an ERP system and a CRM system — both provided as CSV files.
+- **Data Sources**: Import data from two independent source systems - an ERP system and a CRM system - both provided as CSV files.
 - **Data Quality**: Identify, investigate, and resolve data quality issues (e.g., nulls, duplicates, inconsistent formats) prior to analysis.
 - **Integration**: Combine both source systems into a single, unified data model designed for analytical queries, ensuring seamless joins and consistent identifiers.
 - **Scope**: Focus exclusively on the latest available dataset. Historization and slowly changing dimensions are out of scope for this project.
@@ -65,13 +65,12 @@ Develop a modern data warehouse using SQL Server to consolidate sales data from 
 
 Develop SQL-based analytics solutions to deliver detailed, repeatable insights across three key business domains:
 
-- **Customer Behavior** — Understand purchasing patterns, customer segmentation, and retention signals.
-- **Product Performance** — Evaluate which products drive revenue, identify top and bottom performers, and monitor category-level trends.
-- **Sales Trends** — Track revenue growth, seasonal patterns, and period-over-period performance.
+- **Customer Behavior** - Understand purchasing patterns, customer segmentation, and retention signals.
+- **Product Performance** - Evaluate which products drive revenue, identify top and bottom performers, and monitor category-level trends.
+- **Sales Trends** - Track revenue growth, seasonal patterns, and period-over-period performance.
 
 These insights equip stakeholders with the key business metrics needed for confident, data-driven decision-making.
 
-For full specifications, refer to [`docs/requirements.md`](docs/requirements.md).
 
 ---
 
@@ -79,14 +78,7 @@ For full specifications, refer to [`docs/requirements.md`](docs/requirements.md)
 
 The data architecture follows the **Medallion Architecture** pattern, structured across three progressive layers: **Bronze**, **Silver**, and **Gold**.
 
-```
-┌──────────┐    ┌───────────────┐    ┌───────────────┐    ┌──────────────┐    ┌─────────────────┐
-│  Sources │───▶│  Bronze Layer │───▶│  Silver Layer │───▶│  Gold Layer  │───▶│     Consume     │
-│          │    │   Raw Data    │    │ Cleaned Data  │    │Business-Ready│    │  BI & Reporting │
-│  CRM CSV │    │   (Tables)    │    │   (Tables)    │    │   (Views)    │    │ Ad-Hoc Queries  │
-│  ERP CSV │    │               │    │               │    │              │    │ Machine Learning│
-└──────────┘    └───────────────┘    └───────────────┘    └──────────────┘    └─────────────────┘
-```
+<img width="754" height="621" alt="Diagrama sin título drawio" src="https://github.com/user-attachments/assets/02581660-dc9a-4b5c-b648-4c62263ebd09" />
 
 ---
 
