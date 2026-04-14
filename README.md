@@ -1,6 +1,5 @@
-# End-to-End Retail Data Platform: From Raw Ingestion to Business Intelligence
+# End-to-End Retail Data Platform: *From Raw Ingestion to Business Intelligence*
 
-Welcome to the **Data Warehouse and Analytics Project** repository! 
 
 This project demonstrates a comprehensive, end-to-end data warehousing and analytics solution - from designing the warehouse infrastructure to delivering actionable business insights through structured reporting. Built as a portfolio project, it reflects industry best practices across data engineering, data modeling, and business intelligence.
 
