@@ -6,7 +6,7 @@ This project demonstrates a comprehensive, end-to-end data warehousing and analy
 
 ---
 
-## 📋 Project Overview
+## Project Overview
 
 This project covers four core disciplines:
 
@@ -25,7 +25,7 @@ This project covers four core disciplines:
 
 ---
 
-## 🔧 Important Links & Tools
+##  Important Links & Tools
 
 All tools listed below are available free of charge:
 
@@ -82,7 +82,7 @@ The data architecture follows the **Medallion Architecture** pattern, structured
 
 ---
 
-### 🟫 Bronze Layer — Raw Data Ingestion
+### 🟫 Bronze Layer - Raw Data Ingestion
 
 The Bronze layer serves as the **landing zone** for all incoming data. Data is ingested directly from source CSV files into SQL Server tables with no modifications, preserving a faithful copy of the original source records.
 
@@ -98,7 +98,7 @@ The Bronze layer serves as the **landing zone** for all incoming data. Data is i
 
 ---
 
-### 🥈 Silver Layer — Cleansed & Standardized Data
+### 🥈 Silver Layer - Cleansed & Standardized Data
 
 The Silver layer is the **transformation zone**, where raw Bronze data is cleaned, standardized, and integrated. This layer makes data trustworthy and consistent, ready for analytical modeling downstream.
 
@@ -118,7 +118,7 @@ The Silver layer is the **transformation zone**, where raw Bronze data is cleane
 
 ---
 
-### 🥇 Gold Layer — Business-Ready Data
+### 🥇 Gold Layer - Business-Ready Data
 
 The Gold layer is the **consumption zone**, where data is shaped into a business-friendly star schema optimized for reporting, dashboards, and advanced analytics. This layer exposes only curated, validated, business-ready views.
 
