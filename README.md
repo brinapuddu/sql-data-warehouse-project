@@ -40,7 +40,7 @@ All tools listed below are available free of charge:
 
 ---
 
-## 📐 Project Requirements
+## Project Requirements
 
 ### Building the Data Warehouse (Data Engineering)
 
@@ -73,7 +73,7 @@ These insights equip stakeholders with the key business metrics needed for confi
 
 ---
 
-## 🏗️ Data Architecture
+## Data Architecture
 
 The data architecture follows the **Medallion Architecture** pattern, structured across three progressive layers: **Bronze**, **Silver**, and **Gold**.
 
@@ -81,7 +81,7 @@ The data architecture follows the **Medallion Architecture** pattern, structured
 
 ---
 
-### 🟫 Bronze Layer - Raw Data Ingestion
+### Bronze Layer - Raw Data Ingestion
 
 The Bronze layer serves as the **landing zone** for all incoming data. Data is ingested directly from source CSV files into SQL Server tables with no modifications, preserving a faithful copy of the original source records.
 
@@ -97,7 +97,7 @@ The Bronze layer serves as the **landing zone** for all incoming data. Data is i
 
 ---
 
-### 🥈 Silver Layer - Cleansed & Standardized Data
+### Silver Layer - Cleansed & Standardized Data
 
 The Silver layer is the **transformation zone**, where raw Bronze data is cleaned, standardized, and integrated. This layer makes data trustworthy and consistent, ready for analytical modeling downstream.
 
@@ -117,7 +117,7 @@ The Silver layer is the **transformation zone**, where raw Bronze data is cleane
 
 ---
 
-### 🥇 Gold Layer - Business-Ready Data
+### Gold Layer - Business-Ready Data
 
 The Gold layer is the **consumption zone**, where data is shaped into a business-friendly star schema optimized for reporting, dashboards, and advanced analytics. This layer exposes only curated, validated, business-ready views.
 
@@ -135,7 +135,7 @@ The Gold layer is the **consumption zone**, where data is shaped into a business
 
 ---
 
-## 🔄 ETL Pipeline
+## ETL Pipeline
 
 The ETL pipeline moves data progressively through each Medallion layer using SQL Server Stored Procedures, ensuring modularity, reusability, and maintainability.
 
@@ -164,7 +164,7 @@ Data cleansing and transformation rules are applied via stored procedures before
 
 ---
 
-## 📊 Analytics & Reporting
+## Analytics & Reporting
 
 SQL-based analytics are built on top of the Gold layer and organized across three core reporting domains:
 
@@ -173,13 +173,13 @@ SQL-based analytics are built on top of the Gold layer and organized across thre
 - Identification of high-value customers and early signals of churn risk.
 - Regional and demographic breakdown of purchasing patterns.
 
-### 📦 Product Performance
+### Product Performance
 - Revenue contribution ranked by product and product category.
 - Top and bottom performing SKUs across configurable time periods.
 - Inventory turnover rates and sales velocity metrics.
 - Category mix analysis to inform assortment strategy.
 
-### 📈 Sales Trends
+### Sales Trends
 - Month-over-month and year-over-year revenue growth comparisons.
 - Identification of seasonal sales patterns and peak demand periods.
 - Sales performance breakdowns by region, channel, and sales representative.
@@ -236,6 +236,6 @@ sql-data-warehouse-project/
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
