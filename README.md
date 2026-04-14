@@ -1,4 +1,4 @@
-# Data Warehouse and Analytics Project
+# End-to-End Retail Data Platform: From Raw Ingestion to Business Intelligence
 
 Welcome to the **Data Warehouse and Analytics Project** repository! 
 
